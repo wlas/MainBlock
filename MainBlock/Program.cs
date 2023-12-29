@@ -18,7 +18,9 @@ namespace MainBlock
 					Console.WriteLine("Ошибка, вы ввели меньше 6 слов.");
 				}
 			}
-			while (count < 6);			
+			while (count < 6);
+
+			string[] arr2 = newArray(arr1);
 		}
 		/// <summary>
 		/// Получаем строку из 6 слов от пользователя
@@ -44,6 +46,21 @@ namespace MainBlock
 		private static string[] createArray(string str)
 		{
 			return str.Split(' ');
+		}
+		/// <summary>
+		/// Метод создает новый массив размером меньше предыдущего
+		/// </summary>
+		/// <param name="arr"></param>
+		/// <returns></returns>
+		private static string[] newArray(string[] arr)
+		{
+			string[] array = new string[3];
+			var r = new Random();
+			for (int i = 0; i < array.Length; i++)
+			{
+				array[i] = arr[r.Next(0, arr.Length - 1)];
+			}
+			return array;
 		}
 
 	}
