@@ -21,6 +21,10 @@ namespace MainBlock
 			while (count < 6);
 
 			string[] arr2 = newArray(arr1);
+
+			print(arr1, arr2);
+
+			Console.ReadLine();
 		}
 		/// <summary>
 		/// Получаем строку из 6 слов от пользователя
@@ -62,6 +66,26 @@ namespace MainBlock
 			}
 			return array;
 		}
+		/// <summary>
+		/// Выводим все массивы на экран
+		/// </summary>
+		/// <param name="arr1"></param>
+		/// <param name="arr2"></param>
+		private static void print(string[] arr1, string[] arr2)
+		{
+			Console.WriteLine("Первый массив:");
+			foreach (string str in arr1)
+			{
+				Console.WriteLine(str);
+			}
 
+			Console.WriteLine("----------------");
+
+			Console.WriteLine("Второй массив:");
+			foreach (string str in arr2)
+			{
+				Console.WriteLine(str);
+			}
+		}
 	}
 }
